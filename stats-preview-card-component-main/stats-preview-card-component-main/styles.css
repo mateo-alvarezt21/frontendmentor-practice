@@ -1,0 +1,177 @@
+:root{
+    --very-dark-blue:hsl(233, 47%, 7%);
+    --dark-desaturated-blue:hsl(244, 38%, 16%);
+    --soft-violet:hsl(277, 64%, 61%);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white2: hsla(0, 0%, 100%, 0.6);
+}
+
+
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body{
+    
+    font-family: "Inter", sans-serif;
+    background-color: var(--very-dark-blue);
+    color: white;
+}
+
+
+.container{
+    /* margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em; */
+    margin: 1em auto;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+    .cards {
+        height: 100vh;
+        align-items: center;
+    }
+}
+
+.card{
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 1em;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+@media (min-width:768px){
+    .card{
+        display: flex;
+        max-width: 1000px;
+    }
+}
+
+
+
+
+.card-col-img{
+    background-image: url("images/image-header-mobile.jpg");
+    background-color: var(--soft-violet);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+
+@media (min-width:768px){
+    .card-col-img{
+        width: 400px;
+        order: 2;
+        /* flex: 1; */
+        height: auto;
+        flex-basis: 1000px;
+    }
+
+    .card-col-body{
+        order: 1;
+        /* flex: 1; */
+        flex-basis: 100px;
+    }
+}
+
+
+
+.card-body{
+    /* padding-left: 1em;
+    padding-right: 1em; */
+    padding: 2em 2em;
+    text-align: center;
+}
+
+@media (min-width:768px){
+    .card-body{
+       padding-top: 30px;
+       padding-left: 47px;
+    }
+}
+
+
+
+.card-title{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+@media (min-width:768px){
+    .card-title{
+        text-align: left;
+    }
+}
+
+.card-title-morado{
+    color: var(--soft-violet);
+}
+
+.card-text{
+    color: var(--slightly-transparent-white);
+}
+
+@media (min-width:768px){
+    .card-text{
+        text-align: left;
+        font-size: 14px;
+    }
+}
+
+
+
+.footer-container{
+    padding-top: 0;
+}
+
+@media (min-width:768px){
+    .footer-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.footer-title{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.3em;
+}
+
+@media (min-width:768px){
+    .footer-title{
+      font-size: 25px;
+    }
+}
+
+
+.footer-text{
+    margin-top: 0;
+    color: var(--slightly-transparent-white2);
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
